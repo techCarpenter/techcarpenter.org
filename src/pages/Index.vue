@@ -2,7 +2,7 @@
   <Layout>
 
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Gridsome Icon" src="~/favicon.png" width="135" />
+    <g-image alt="Gridsome Icon" src="~/favicon.png" width="50" />
 
     <h1>Hello, world!</h1>
 
@@ -14,9 +14,6 @@
       <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
       <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
     </p>
-    <ul>
-        <li v-for="i in [0, 1, 2, 3]" :key="i">{{i}}</li>
-    </ul>
 
   </Layout>
 </template>
