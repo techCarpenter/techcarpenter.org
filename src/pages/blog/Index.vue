@@ -2,16 +2,16 @@
   <Layout>
     <h1>Blog</h1>
     <ul>
-      <li v-for="post in $static.posts.edges" :key="post.node.id">
+      <li v-for="post in $page.posts.edges" :key="post.node.id">
         <g-link :to="post.node.path">{{ post.node.title }}</g-link>
       </li>
     </ul>
   </Layout>
 </template>
 
-<static-query>
+<page-query>
   query {
-    posts: allBlog {
+    posts: allBlog(sortBy: "date") {
       edges {
         node {
           id
@@ -21,4 +21,12 @@
       }
     }
   }
-</static-query>
+</page-query>
+
+<script>
+export default {
+  metaInfo: {
+    title: "Articles",
+  },
+};
+</script>

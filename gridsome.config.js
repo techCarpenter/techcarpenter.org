@@ -5,9 +5,10 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: "TechCarpenter",
+  siteName: "Techcarpenter",
   siteDescription: "",
-  siteUrl: "techcarpenter.org",
+  siteUrl: "https://techcarpenter.org",
+  titleTemplate: "%s",
   templates: {
     Blog: "/blog/:slug",
     Tag: "/tag/:id",

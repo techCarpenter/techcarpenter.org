@@ -1,16 +1,18 @@
 <template>
   <div class="layout">
     <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
+      <g-link to="/">TechCarpenter</g-link>
       <nav class="nav">
         <g-link class="nav__link" to="/">Home</g-link>
         <g-link class="nav__link" to="/about/">About</g-link>
         <g-link class="nav__link" to="/blog/">Blog</g-link>
       </nav>
     </header>
-    <slot/>
+    <slot />
+    <footer>
+      Copyright &copy; {{new Date().getFullYear().toString()}}
+      <g-link to="/">TechCarpenter</g-link>
+    </footer>
   </div>
 </template>
 
@@ -24,9 +26,10 @@ query {
 
 <style>
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   line-height: 1.5;
 }
 
@@ -47,5 +50,8 @@ body {
 
 .nav__link {
   margin-left: 20px;
+}
+footer {
+  text-align: center;
 }
 </style>
